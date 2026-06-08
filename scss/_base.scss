@@ -1,0 +1,25 @@
+@use "variables" as *;
+
+html {
+  font-size: 62.5%; /* rem基準（1rem = 10px）*/
+}
+
+body {
+  font-family: $font-base;
+  font-size: $fz-md;
+  color: $color-text;
+  background: $color-bg;
+  overflow-x: hidden;
+
+  &.scroll-stop {
+    overflow-y: hidden;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.font-en {
+  font-family: $font-en;
+}

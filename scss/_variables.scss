@@ -1,0 +1,55 @@
+/* =================================
+  Variables
+================================= */
+
+/* ---------- color ---------- */
+$color-white: #ffffff;
+
+$color-text: #404040;
+$color-text-light: #a1a1a1;
+
+$color-bg: #f9f6f3;
+
+$color-accent-light: #f7eae1;
+$color-accent: #ffac72;
+$color-accent-dark: #ff9048;
+
+/* ---------- font-family ---------- */
+$font-base:
+  "Noto Sans JP",
+  "Hiragino Kaku Gothic ProN",
+  "Yu Gothic",
+  "Meiryo",
+  sans-serif;
+
+$font-en:
+  "Josefin Sans",
+  system-ui,
+  -apple-system,
+  sans-serif;
+
+/* ---------- font-size ---------- */
+$fz-xs: 1.2rem;
+$fz-sm: 1.4rem;
+$fz-md: 1.6rem;
+$fz-lg: 1.8rem;
+$fz-xl: 2rem;
+$fz-2xl: 2.4rem;
+$fz-3xl: 2.8rem;
+
+/* ---------- layout ---------- */
+$container-width: 1280px;
+$container-padding: 20px;
+
+/* ---------- breakpoints ----------*/
+$breakpoints: (
+  sm: 540px,
+  md: 768px,
+  lg: 999px
+);
+
+@mixin mq($breakpoint) {
+  @media screen and (max-width: map-get($breakpoints, $breakpoint)) {
+    @content;
+  }
+}

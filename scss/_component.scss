@@ -1,0 +1,317 @@
+@use "variables" as *;
+
+/* =========================
+  button
+========================= */
+.c-button {
+  --button-arrow-color: #{$color-text};
+  --button-arrow-hover-color: #{$color-text-light};
+
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24rem;
+  height: 4.8rem;
+  border-radius: 999px;
+
+  color: $color-text;
+  font-family: $font-en;
+  letter-spacing: 0.04em;
+  background: $color-bg;
+
+  transition:
+    color 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+
+  @include mq(sm) {
+    width: 100%;
+  }
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transition: 0.3s ease;
+  }
+
+  &::before {
+    right: 2.4rem;
+    width: 2.4rem;
+    height: 1px;
+    background: var(--button-arrow-color);
+    transform: translateY(-50%);
+  }
+
+  &::after {
+    right: 3rem;
+    width: 0.6rem;
+    height: 0.6rem;
+    border-top: 1px solid var(--button-arrow-color);
+    transform: translateY(-50%) translateX(0.5rem) rotate(45deg);
+  }
+
+  &:hover {
+    &::before {
+      right: 1.4rem;
+      background: var(--button-arrow-hover-color);
+    }
+
+    &::after {
+      right: 2rem;
+      border-top-color: var(--button-arrow-hover-color);
+    }
+  }
+}
+
+/* 凸 */
+.c-button--outset,
+.c-button--color {
+  --button-arrow-color: #{$color-accent};
+  --button-arrow-hover-color: #{$color-accent};
+
+  &:hover {
+    color: $color-accent;
+    transform: translateY(1px);
+  }
+}
+
+.c-button--outset {
+  box-shadow:
+    -2px 2px 4px rgba(#d5ccc5, 0.2),
+    2px -2px 4px rgba(#d5ccc5, 0.2),
+    -5px -5px 9px rgba(#ffffff, 1),
+    5px 5px 9px rgba(#d5ccc5, 0.8);
+
+  &:hover {
+    box-shadow:
+      -1px 1px 2px rgba(#d5ccc5, 0.2),
+      1px -1px 2px rgba(#d5ccc5, 0.2),
+      -2px -2px 5px rgba(#ffffff, 1),
+      2px 2px 5px rgba(#d5ccc5, 0.7);
+  }
+}
+
+.c-button--color {
+  background: $color-accent-light;
+
+  box-shadow:
+    -2px 2px 4px rgba(#d5ccc5, 0.2),
+    2px -2px 4px rgba(#d5ccc5, 0.2),
+    -3px -3px 7px rgba(#ffffff, 1),
+    3px 3px 8px rgba(#d5ccc5, 1);
+
+  &:hover {
+    box-shadow:
+      -1px 1px 2px rgba(#d5ccc5, 0.2),
+      1px -1px 2px rgba(#d5ccc5, 0.2),
+      -1px -1px 4px rgba(#ffffff, 1),
+      2px 2px 4px rgba(#d5ccc5, 0.7);
+  }
+}
+
+/* 凹 */
+.c-button--inset {
+  box-shadow:
+    inset -1px 1px 2px rgba(#e0dddb, 0.2),
+    inset 1px -1px 2px rgba(#e0dddb, 0.2),
+    inset -5px -5px 7px rgba(#ffffff, 0.9),
+    inset 5px 5px 5px rgba(#e0dddb, 0.8);
+
+  &:hover {
+    color: $color-text-light;
+    transform: translateY(-1px);
+
+    box-shadow:
+      inset -1px 1px 2px rgba(#e0dddb, 0.12),
+      inset 1px -1px 2px rgba(#e0dddb, 0.12),
+      inset -2px -2px 4px rgba(#ffffff, 0.7),
+      inset 2px 2px 4px rgba(#e0dddb, 0.5),
+      -2px -2px 4px rgba(#ffffff, 0.5),
+      2px 2px 4px rgba(#d5ccc5, 0.2);
+  }
+}
+
+
+/* =========================
+  return-button
+========================= */
+.c-return-button {
+  margin-bottom: 1.6rem;
+  
+  a {
+    font-family: $font-en;
+    font-size: $fz-sm;
+    color: $color-accent-dark;
+    padding-left: 3.2rem;
+    position: relative;
+
+    &::before,
+    &::after {
+      position: absolute;
+      content: '';
+      top: 50%;
+    }
+    
+    &::before {
+      width: 1.8rem;
+      height: 1px;
+      background: $color-accent-dark;
+      left: 0;
+      transform: translateY(-50%);
+    }
+    
+    &::after {
+      width: 0.6rem;
+      height: 0.6rem;
+      border-top: 1px solid $color-accent-dark;
+      transform: rotate(-45deg) translateY(-50%) translateX(0.2rem);
+      left: 0.2rem;
+    }
+  }
+}
+
+
+
+/* =========================
+  sns-button
+========================= */
+.c-sns-button {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 50%;
+  background: $color-bg;
+  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: relative; 
+
+  transition: .3s ease;
+  box-shadow:
+    inset -2px 2px 2px rgba(#E0DDDB, 0.3),
+    inset 2px -2px 2px rgba(#E0DDDB, 0.3),
+    inset -3px -3px 2px rgba(#ffffff, 1),
+    inset 3px 3px 2px rgba(#E0DDDB, 0.8);
+  
+  &:hover {
+    opacity: .5;
+    transform: translateY(1px);
+  
+    box-shadow:
+      inset -1px 1px 1px rgba(#E0DDDB, 0.2),
+      inset 1px -1px 1px rgba(#E0DDDB, 0.2),
+      inset -1px -1px 1px rgba(#ffffff, 1),
+      inset 1px 1px 1px rgba(#E0DDDB, 0.7),
+      -1px -1px 2px rgba(#ffffff, 0.5),
+      1px 1px 2px rgba(#d5ccc5, 0.2);
+  }
+  
+  img {
+    width: 1.8rem;
+    height: 1.8rem;
+  }
+}
+
+
+/* =========================
+  section
+========================= */
+.c-section {
+  padding-block: clamp(5rem, 8vw, 9.6rem);
+}
+
+
+/* =========================
+  section-title
+========================= */
+.c-section-head {
+  font-family: $font-en;
+  margin-bottom: clamp(4rem, 6vw, 6.4rem);
+
+  &__label {
+    position: relative;
+    font-size: $fz-lg;
+    color: $color-accent-dark;
+    padding-left: 1.6rem;
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 0.8rem;
+      height: 1px;
+      background: $color-accent-dark;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  &__title {
+    font-size: $fz-3xl;
+    font-weight: 400;
+
+    @include mq(sm) {
+      font-size: $fz-2xl;
+    }
+
+    br {
+      display: none;
+
+      @include mq(lg) {
+        display: block;
+      }
+
+      @include mq(md) {
+        display: none;
+      }
+    }
+  }
+
+  &__title--ja {
+    font-family: $font-base;
+    font-weight: 500;
+  }
+}
+
+/* 2カラム */
+.c-section-head--between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* 中央寄せ */
+.c-section-head--center {
+  text-align: center;
+
+  &__label {
+    padding-left: 0;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+/* work詳細ページ */
+.p-work-detail {
+  .c-section-head {
+    margin-bottom: 2.4rem;
+  }
+
+  .p-work-detail__head {
+    .c-section-head__title {
+      font-size: clamp(2.8rem, 7vw, 4rem);
+    }
+
+    .c-section-head__lead {
+      font-size: clamp(1.6rem, 4vw, 2.4rem);
+    }
+  }
+}
