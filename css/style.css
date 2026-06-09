@@ -113,6 +113,10 @@ body.scroll-stop {
   overflow-y: hidden;
 }
 
+main {
+  overflow-x: clip;
+}
+
 img {
   width: 100%;
 }
@@ -125,7 +129,6 @@ img {
   max-width: 1320px;
   margin-inline: auto;
   padding-inline: 20px;
-  overflow-x: clip;
 }
 
 /* =========================
