@@ -522,7 +522,7 @@ img {
   margin-bottom: 2.4rem;
 }
 .p-work-detail .p-work-detail__head .c-section-head__title {
-  font-size: clamp(2.8rem, 7vw, 4rem);
+  font-size: clamp(2.8rem, 7vw, 3.4rem);
 }
 .p-work-detail .p-work-detail__head .c-section-head__lead {
   font-size: clamp(1.6rem, 4vw, 2.4rem);
@@ -1093,7 +1093,7 @@ img {
 ========================= */
 .p-work-detail__head {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: auto minmax(300px, clamp(300px, 45vw, 650px));
   gap: 4.8rem;
   align-items: center;
 }
@@ -1150,6 +1150,12 @@ img {
 .p-work-detail__nav {
   text-align: center;
 }
+.p-work-detail__section {
+  border-bottom: 1px solid #ffffff;
+}
+.p-work-detail__section:last-of-type {
+  border-bottom: none;
+}
 .p-work-detail .p-overview {
   display: grid;
   grid-template-columns: 60% 1fr;
@@ -1189,7 +1195,6 @@ img {
   line-height: 1.75;
 }
 .p-work-detail .p-approach {
-  border-block: 1px solid #ffffff;
   display: grid;
   grid-template-columns: 70% 1fr;
   gap: 4.8rem;
@@ -1228,7 +1233,7 @@ img {
   margin-inline: auto;
 }
 .p-work-detail .p-approach-card__title {
-  font-size: 1.8rem;
+  font-size: 2rem;
   font-weight: 600;
   margin-bottom: 1.2rem;
 }
@@ -1301,4 +1306,9 @@ img {
   background: #ffffff;
   padding: clamp(0.8rem, 2vw, 1.6rem);
   border-radius: clamp(0.8rem, 2vw, 1.6rem);
+}
+
+/* 実績非公開のページ */
+.p-work-detail--private .p-approach {
+  grid-template-columns: 1fr;
 }/*# sourceMappingURL=style.css.map */

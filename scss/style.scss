@@ -640,7 +640,7 @@
 .p-work-detail {
   &__head {
   display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto minmax(300px, clamp(300px, 45vw, 650px));
     gap: 4.8rem;
     align-items: center;
 
@@ -699,6 +699,14 @@
     text-align: center;
   }
 
+  &__section {
+    border-bottom: 1px solid $color-white;
+
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+
   .p-overview {
     display: grid;
     grid-template-columns: 60% 1fr;
@@ -742,7 +750,6 @@
   }
 
   .p-approach {
-    border-block: 1px solid $color-white;
     display: grid;
     grid-template-columns: 70% 1fr;
     gap: 4.8rem;
@@ -780,7 +787,7 @@
       }
 
       &__title {
-        font-size: $fz-lg;
+        font-size: $fz-xl;
         font-weight: 600;
         margin-bottom: 1.2rem;
 
@@ -866,5 +873,11 @@
       }
     }
   }
+}
 
+/* 実績非公開のページ */
+.p-work-detail--private {
+  .p-approach {
+    grid-template-columns: 1fr;
+  }
 }
