@@ -899,6 +899,62 @@ img {
 }
 
 /* =========================
+  about
+========================= */
+.p-skills__list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.4rem;
+}
+@media screen and (max-width: 999px) {
+  .p-skills__list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media screen and (max-width: 540px) {
+  .p-skills__list {
+    grid-template-columns: 1fr;
+  }
+}
+.p-skills .p-skills-card {
+  background: #ffffff;
+  padding: 2.4rem;
+  border-radius: 1.6rem;
+}
+.p-skills .p-skills-card__title {
+  display: flex;
+  gap: 1.6rem;
+  align-items: center;
+  margin-bottom: 1.6rem;
+}
+.p-skills .p-skills-card__heading {
+  font-size: 1.8rem;
+  overflow-wrap: anywhere;
+}
+.p-skills .p-skills-card__icon {
+  width: 5.6rem;
+}
+.p-skills .p-skills-card__items {
+  margin-top: 1.6rem;
+}
+.p-skills .p-skills-card__item {
+  padding-left: 2rem;
+  padding-block: 2px;
+  position: relative;
+}
+.p-skills .p-skills-card__item::before {
+  position: absolute;
+  content: "";
+  width: 5px;
+  height: 10px;
+  border-bottom: 2px solid #ffac72;
+  border-right: 2px solid #ffac72;
+  transform: rotate(45deg);
+  top: 9px;
+  left: 3px;
+}
+
+/* =========================
   service
 ========================= */
 .p-service__list {

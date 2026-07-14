@@ -413,6 +413,70 @@
 
 
 /* =========================
+  about
+========================= */
+.p-skills {
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.4rem;
+
+    @include mq(lg) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include mq(sm) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .p-skills-card {
+    background: $color-white;
+    padding: 2.4rem;
+    border-radius: 1.6rem;
+
+    &__title {
+      display: flex;
+      gap: 1.6rem;
+      align-items: center;
+      margin-bottom: 1.6rem;
+    }
+
+    &__heading {
+      font-size: $fz-lg;
+      overflow-wrap: anywhere;
+    }
+
+    &__icon {
+      width: 5.6rem;
+    }
+
+    &__items {
+      margin-top: 1.6rem;
+    }
+
+    &__item {
+      padding-left: 2rem;
+      padding-block: 2px;
+      position: relative;
+
+      &::before {
+        position: absolute;
+        content: '';
+        width: 5px;
+        height: 10px;
+        border-bottom: 2px solid $color-accent;
+        border-right: 2px solid $color-accent;
+        transform: rotate(45deg);
+        top: 9px;
+        left: 3px;
+      }
+    }
+  }
+}
+
+
+/* =========================
   service
 ========================= */
 .p-service {
