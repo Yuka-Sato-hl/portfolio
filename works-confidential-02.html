@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -76,65 +77,20 @@
         </div>
         
         <section class="c-section p-work-detail__section p-approach">
-          <div class="p-approach__content">
-            <div class="c-section-head">
-              <span class="c-section-head__label">approach</span>
-              <h2 class="c-section-head__title c-section-head__title--ja">工夫したポイント</h2>
-            </div>
-  
-            <div class="p-approach__list">
-              <div class="p-approach-card">
-                <div class="p-approach-card__image">
-                  <img src="images/common/icon-migration.svg" alt="マイグレーションのアイコン">
-                </div>
-                <div class="p-approach-card__content">
-                  <h3 class="p-approach-card__title">Movable TypeからWordPressへの移行</h3>
-                  <p class="p-approach-card__text">
-                    既存サイトをMovable TypeからWordPressへ移行しました。<br>
-                    コンテンツ量が多く、移行対象となるファイル数も膨大だったため、データの抜け漏れやリンク切れ、表示崩れが発生しないよう、一つひとつ確認しながら移行作業を進めました。<br>
-                    正確性を重視し、公開後も問題なく運用できる状態で納品しています。
-                  </p>
-                </div>
-              </div>
-  
-              <div class="p-approach-card">
-                <div class="p-approach-card__image">
-                  <img src="images/common/icon-cording.svg" alt="コーディングのアイコン">
-                </div>
-                <div class="p-approach-card__content">
-                  <h3 class="p-approach-card__title">ご要望に合わせた機能追加・デザイン調整</h3>
-                  <p class="p-approach-card__text">
-                    既存のWordPressテーマをベースに、お客様のご要望に合わせたカスタマイズを行いました。<br>
-                    制作実績をカルーセル表示へ変更したほか、フッターへの営業日カレンダー設置など、利便性や視認性を向上させる機能追加を実装しています。既存デザインとの統一感を保ちながら、必要な機能を追加しました。
-                  </p>
-                </div>
-              </div>
-  
-              <div class="p-approach-card">
-                <div class="p-approach-card__image">
-                  <img src="images/common/icon-setting.svg" alt="保守・運用のアイコン">
-                </div>
-                <div class="p-approach-card__content">
-                  <h3 class="p-approach-card__title">公開後も継続して改善・修正に対応</h3>
-                  <p class="p-approach-card__text">
-                    公開後もレイアウト調整やテキスト修正、機能の追加・改善など継続的な保守・運用を担当しました。<br>
-                    お客様からのご要望に応じて迅速に対応し、サイトを安心して運用いただけるようサポートしています。
-                  </p>
-                </div>
-              </div>
-
-              <div class="p-approach-card">
-                <div class="p-approach-card__image">
-                  <img src="images/common/icon-maintenance.svg" alt="アップデートのアイコン">
-                </div>
-                <div class="p-approach-card__content">
-                  <h3 class="p-approach-card__title">PHPバージョンアップによるサイト復旧</h3>
-                  <p class="p-approach-card__text">
-                    サーバー環境の変更に伴うPHPバージョンアップに対応しました。既存サイトとの互換性を確認しながら修正を進め、表示崩れや機能の不具合がないかを検証しました。<br>
-                    サイトが正常に表示・動作することを確認したうえで復旧対応を完了しています。
-                  </p>
-                </div>
-              </div>
+          <div class="c-section-head"><span class="c-section-head__label">approach</span><h2 class="c-section-head__title c-section-head__title--ja">工夫したポイント</h2></div>
+          <div class="p-approach__inner">
+            <div class="p-approach__visual" aria-hidden="true"><div class="p-approach__image swiper"><div class="swiper-wrapper">
+              <div class="swiper-slide"><div class="p-approach__image-frame"><img src="images/works/works-lumera-mockup-sp.png" alt="コーポレートサイトのデザインプレビュー1"></div></div>
+              <div class="swiper-slide"><div class="p-approach__image-frame"><img src="images/works/works-lumera-mockup-sp.png" alt="コーポレートサイトのデザインプレビュー2"></div></div>
+              <div class="swiper-slide"><div class="p-approach__image-frame"><img src="images/works/works-lumera-mockup-sp.png" alt="コーポレートサイトのデザインプレビュー3"></div></div>
+              <div class="swiper-slide"><div class="p-approach__image-frame"><img src="images/works/works-lumera-mockup-sp.png" alt="コーポレートサイトのデザインプレビュー4"></div></div>
+            </div></div></div>
+            <div class="p-approach__content">
+              <div class="p-approach__controls"><button class="p-approach__button p-approach__button--prev swiper-button-prev" type="button" aria-label="前のポイントを表示"></button><div class="p-approach__pagination swiper-pagination"></div><button class="p-approach__button p-approach__button--next swiper-button-next" type="button" aria-label="次のポイントを表示"></button></div>
+              <div class="p-approach__text is-active"><h3 class="p-approach__text-title">Movable TypeからWordPressへの移行</h3><p>既存サイトをMovable TypeからWordPressへ移行しました。</p><p>コンテンツ量が多く、移行対象となるファイル数も膨大だったため、データの抜け漏れやリンク切れ、表示崩れが発生しないよう、一つひとつ確認しながら移行作業を進めました。正確性を重視し、公開後も問題なく運用できる状態で納品しています。</p></div>
+              <div class="p-approach__text" aria-hidden="true"><h3 class="p-approach__text-title">ご要望に合わせた機能追加・デザイン調整</h3><p>既存のWordPressテーマをベースに、お客様のご要望に合わせたカスタマイズを行いました。</p><p>制作実績をカルーセル表示へ変更したほか、フッターへの営業日カレンダー設置など、利便性や視認性を向上させる機能追加を実装しています。既存デザインとの統一感を保ちながら、必要な機能を追加しました。</p></div>
+              <div class="p-approach__text" aria-hidden="true"><h3 class="p-approach__text-title">公開後も継続して改善・修正に対応</h3><p>公開後もレイアウト調整やテキスト修正、機能の追加・改善など継続的な保守・運用を担当しました。</p><p>お客様からのご要望に応じて迅速に対応し、サイトを安心して運用いただけるようサポートしています。</p></div>
+              <div class="p-approach__text" aria-hidden="true"><h3 class="p-approach__text-title">PHPバージョンアップによるサイト復旧</h3><p>サーバー環境の変更に伴うPHPバージョンアップに対応しました。既存サイトとの互換性を確認しながら修正を進め、表示崩れや機能の不具合がないかを検証しました。</p><p>サイトが正常に表示・動作することを確認したうえで復旧対応を完了しています。</p></div>
             </div>
           </div>
         </section>
@@ -193,6 +149,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="./js/index.js"></script>
 </body>
 </html>

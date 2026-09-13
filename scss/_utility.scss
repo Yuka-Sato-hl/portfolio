@@ -1,0 +1,45 @@
+@use "variables" as *;
+
+/* =========================
+  utility
+========================= */
+
+/* スマホ幅のみ改行する */
+.u-br--sp-only {
+  display: none;
+
+  @include mq(sm) {
+    display: block;
+  }
+}
+
+/* タブレット幅（769px〜999px）のみ改行する */
+.u-br--tablet-only {
+  display: none;
+
+  @include mq(lg) {
+    display: block;
+  }
+
+  @include mq(md) {
+    display: none;
+  }
+}
+
+/* 769px以上で改行する */
+.u-br--pc-only {
+  @include mq(md) {
+    display: none;
+  }
+}
+
+/* タブレット幅（769px〜999px）だけ改行しない */
+.u-br--hide-tablet {
+  @include mq(lg) {
+    display: none;
+  }
+
+  @include mq(md) {
+    display: block;
+  }
+}

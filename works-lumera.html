@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css">
   <link rel="stylesheet" href="./css/style.css">
 </head>
 <body>
@@ -82,7 +83,7 @@
             <img src="images/works/works-lumera-mockup-pc.png" alt="美容液LPのスクリーンショット">
           </div>
           
-          <div class="p-overview__content">
+          <div class="p-overview__content p-work-detail__inner">
             <span class="p-overview__shape"></span>
             <div class="c-section-head">
               <span class="c-section-head__label">overview</span>
@@ -97,61 +98,37 @@
         </section>
 
         <section class="c-section p-work-detail__section p-approach">
-          <div class="p-approach__content">
-            <div class="c-section-head">
-              <span class="c-section-head__label">approach</span>
-              <h2 class="c-section-head__title c-section-head__title--ja">工夫したポイント</h2>
-            </div>
-  
-            <div class="p-approach__list">
-              <div class="p-approach-card">
-                <div class="p-approach-card__image">
-                  <img src="images/common/icon-design.svg" alt="デザインのアイコン">
-                </div>
-                <div class="p-approach-card__content">
-                  <h3 class="p-approach-card__title">やさしさと安心感が伝わるデザイン</h3>
-                  <p class="p-approach-card__text">
-                    ベージュやグリーンを基調に、自然光を活かした写真を使用することで、ナチュラルでやさしい世界観を表現しました。<br>
-                    また、余白を十分に確保し、情報量が多くなりすぎないよう整理することで、商品の魅力が伝わりやすいデザインを意識しています。
-                  </p>
-                </div>
-              </div>
-  
-              <div class="p-approach-card">
-                <div class="p-approach-card__image">
-                  <img src="images/common/icon-layout.svg" alt="設計のアイコン">
-                </div>
-                <div class="p-approach-card__content">
-                  <h3 class="p-approach-card__title">商品の特徴が伝わる構成設計</h3>
-                  <p class="p-approach-card__text">
-                    敏感肌の悩みへの共感から始まり、肌トラブルの原因、商品の特徴、成分紹介へと段階的に情報を展開しています。<br>
-                    ユーザーの疑問や不安を解消しながら読み進められる構成とすることで、商品への理解を深められるよう設計しました。
-                  </p>
-                </div>
-              </div>
-  
-              <div class="p-approach-card">
-                <div class="p-approach-card__image">
-                  <img src="images/common/icon-cart.svg" alt="ショッピングカートのアイコン">
-                </div>
-                <div class="p-approach-card__content">
-                  <h3 class="p-approach-card__title">購入につながる導線設計</h3>
-                  <p class="p-approach-card__text">
-                    ファーストビューとページ下部にCTAを配置し、購入を検討したタイミングですぐに行動へ移れるようにしています。<br>
-                    また、成分紹介や利用者の声を掲載することで信頼感を高め、購入への心理的ハードルを下げる工夫を行いました。
-                  </p>
-                </div>
-              </div>
-            </div>
+          <div class="c-section-head">
+            <span class="c-section-head__label">approach</span>
+            <h2 class="c-section-head__title c-section-head__title--ja">工夫したポイント</h2>
           </div>
 
-          <div class="p-approach__image">
-            <img src="images/works/works-lumera-mockup-sp.png" alt="美容液LPのスクリーンショット">
+          <div class="p-approach__inner">
+            <div class="p-approach__visual">
+              <div class="p-approach__image swiper">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide"><div class="p-approach__image-frame"><img src="images/works/works-lumera-mockup-sp.png" alt="Lumera LPのデザインプレビュー1"></div></div>
+                  <div class="swiper-slide"><div class="p-approach__image-frame"><img src="images/works/works-lumera-mockup-sp.png" alt="Lumera LPのデザインプレビュー2"></div></div>
+                  <div class="swiper-slide"><div class="p-approach__image-frame"><img src="images/works/works-lumera-mockup-sp.png" alt="Lumera LPのデザインプレビュー3"></div></div>
+                </div>
+              </div>
+            </div>
+
+            <div class="p-approach__content">
+              <div class="p-approach__controls">
+                <button class="p-approach__button p-approach__button--prev swiper-button-prev" type="button" aria-label="前のポイントを表示"></button>
+                <div class="p-approach__pagination swiper-pagination"></div>
+                <button class="p-approach__button p-approach__button--next swiper-button-next" type="button" aria-label="次のポイントを表示"></button>
+              </div>
+              <div class="p-approach__text is-active"><h3 class="p-approach__text-title">やさしさと安心感が伝わるデザイン</h3><p>ベージュやグリーンを基調に、自然光を活かした写真を使用することで、ナチュラルでやさしい世界観を表現しました。</p><p>また、余白を十分に確保し、情報量が多くなりすぎないよう整理することで、商品の魅力が伝わりやすいデザインを意識しています。</p></div>
+              <div class="p-approach__text" aria-hidden="true"><h3 class="p-approach__text-title">商品の特徴が伝わる構成設計</h3><p>敏感肌の悩みへの共感から始まり、肌トラブルの原因、商品の特徴、成分紹介へと段階的に情報を展開しています。</p><p>ユーザーの疑問や不安を解消しながら読み進められる構成とすることで、商品への理解を深められるよう設計しました。</p></div>
+              <div class="p-approach__text" aria-hidden="true"><h3 class="p-approach__text-title">購入につながる導線設計</h3><p>ファーストビューとページ下部にCTAを配置し、購入を検討したタイミングですぐに行動へ移れるようにしています。</p><p>また、成分紹介や利用者の声を掲載することで信頼感を高め、購入への心理的ハードルを下げる工夫を行いました。</p></div>
+            </div>
           </div>
         </section>
 
-        <section class="c-section p-work-detail__section p-summary">
-          <section class="p-reflection">
+        <section class="c-section p-work-detail__section p-reflection">
+          <div class="p-work-detail__inner">
             <div class="c-section-head">
               <span class="c-section-head__label">reflection</span>
               <h2 class="c-section-head__title c-section-head__title--ja">制作を通して</h2>
@@ -161,15 +138,18 @@
             </p>
             <p class="p-reflection__text">
               「余計なものはいらない。」というコンセプトを軸に、自然由来成分や無添加処方といった商品の特徴が伝わるよう、デザインと構成の両面から設計しています。配色や写真選びではやさしさや安心感を表現し、余白を活かすことで落ち着いた印象に仕上げました。
-            </p class="p-reflection__text">
+            </p>
             <p class="p-reflection__text">
               また、悩みへの共感から商品の特徴、成分紹介へと段階的に情報を展開することで、自然に理解を深められる構成を意識しています。
             </p>
             <p class="p-reflection__text">
               この制作を通して、見た目の美しさだけでなく、情報の伝え方や導線設計の重要性を改めて実感しました。今後もデザインと実装の両面から、運用しやすく成果につながるWebサイト制作を心がけていきたいと考えています。
             </p>
-          </section>
-          <section class="p-design">
+          </div>
+        </section>
+
+        <section class="c-section p-work-detail__section p-design">
+          <div class="p-work-detail__inner">
             <div class="c-section-head">
               <span class="c-section-head__label">design system</span>
               <h2 class="c-section-head__title c-section-head__title--ja">デザインシステム</h2>
@@ -182,7 +162,7 @@
               <h3 class="p-design-card__title">Color palette</h3>
               <img class="p-design-card__image p-design-card__image--color-palette" src="images/works/works-lumera-color.png" alt="使用したカラー">
             </div>
-          </section>
+          </div>
         </section>
 
         <div class="p-work-detail__nav">
@@ -239,6 +219,7 @@
     </div>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
   <script src="./js/index.js"></script>
 </body>
 </html>

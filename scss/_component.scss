@@ -259,17 +259,6 @@
       font-size: $fz-2xl;
     }
 
-    br {
-      display: none;
-
-      @include mq(lg) {
-        display: block;
-      }
-
-      @include mq(md) {
-        display: none;
-      }
-    }
   }
 
   &__title--ja {
